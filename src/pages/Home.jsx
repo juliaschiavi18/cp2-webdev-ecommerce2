@@ -1,7 +1,39 @@
 import Navbar from "../components/Navbar";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+const [reactRepos, setReactRepos] = useState([]);
+  const [nodeRepos, setNodeRepos] = useState([]);
+  const [pythonRepos, setPythonRepos] = useState([]);
+
+  const API = import.meta.env.VITE_GITHUB_API;
   
+
+  useEffect(() => {
+    fetch(`${API}react&per_page=5`, {
+    })
+      .then(res => res.json())
+      .then(data => { setReactRepos(data.items) })
+      .catch(err => console.error(err));
+
+    fetch(`${API}node&per_page=5`, {
+ 
+    })
+      .then(res => res.json())
+      .then(data => setNodeRepos(data.items))
+      .catch(err => console.error(err));
+
+    fetch(`${API}python&per_page=5`, {
+ 
+    })
+      .then(res => res.json())
+      .then(data => setPythonRepos(data.items))
+      .catch(err => console.error(err));
+  }, [API]);
+
+
+
+
   return (
     <div>
       <Navbar />
@@ -12,7 +44,7 @@ export default function Home() {
         {/* Card 1 */}
         <div className="relative group overflow-hidden rounded shadow transition-transform duration-300 animate-float">
           <img
-            src="http://fakestoreapi.com/"
+            src=""
             alt="Imagem 1"
             className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
           />
@@ -24,7 +56,7 @@ export default function Home() {
         {/* Card 2 */}
         <div className="relative group overflow-hidden rounded shadow transition-transform duration-300 animate-float">
           <img
-            src="http://fakestoreapi.com/"
+            src=""
             alt="Imagem 2"
             className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
           />
@@ -36,7 +68,7 @@ export default function Home() {
         {/* Card 3 */}
         <div className="relative group overflow-hidden rounded shadow transition-transform duration-300 animate-float">
           <img
-            src="http://fakestoreapi.com/"
+            src=""
             alt="Imagem 3"
             className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
           />
