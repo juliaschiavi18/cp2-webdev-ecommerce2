@@ -12,7 +12,7 @@ export default function Home() {
         {/* Card 1 */}
         <div className="relative group overflow-hidden rounded shadow transition-transform duration-300 animate-float">
           <img
-            src="https://picsum.photos/300?1"
+            src="http://fakestoreapi.com/"
             alt="Imagem 1"
             className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
           />
@@ -24,7 +24,7 @@ export default function Home() {
         {/* Card 2 */}
         <div className="relative group overflow-hidden rounded shadow transition-transform duration-300 animate-float">
           <img
-            src="https://picsum.photos/300?2"
+            src="http://fakestoreapi.com/"
             alt="Imagem 2"
             className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
           />
@@ -36,7 +36,7 @@ export default function Home() {
         {/* Card 3 */}
         <div className="relative group overflow-hidden rounded shadow transition-transform duration-300 animate-float">
           <img
-            src="https://picsum.photos/300?3"
+            src="http://fakestoreapi.com/"
             alt="Imagem 3"
             className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
           />
